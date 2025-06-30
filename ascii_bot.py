@@ -108,5 +108,5 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
 
     print("✅ Pro ASCII Bot ishga tushdi!")
-    app.run_polling()
+    app.run_polling(on_startup=on_startup)
 
