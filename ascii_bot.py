@@ -101,7 +101,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Botni ishga tushirish
 if __name__ == "__main__":
-    TOKEN = "8157440342:AAEhY7A-pSm7Xt3JrsfeKlBd5X1AC4Ihp_w"
+    TOKEN = "BOT_TOKEN"
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))  # ✅ start komandasi qo‘shildi
