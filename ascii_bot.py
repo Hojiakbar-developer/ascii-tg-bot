@@ -1,7 +1,7 @@
 import os
-from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+from dotenv import load_dotenv
 
-# 🔽 Bu qismni shu yerga qo‘shing:
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -101,7 +101,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Botni ishga tushirish
 if __name__ == "__main__":
-    TOKEN = "BOT_TOKEN"
+    TOKEN = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))  # ✅ start komandasi qo‘shildi
